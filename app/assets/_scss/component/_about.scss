@@ -1,0 +1,65 @@
+// About
+
+#about {
+	position: absolute;
+	background: black;
+	color: white;
+	width: 100%;
+	left: 0;
+	padding: em(120) em(20);
+	overflow: hidden;
+	@include media($m-desktop) {
+		padding-top: em(50);
+	}
+	& > div {
+		@include outer-container;
+	}
+
+	.info {
+		@include span-columns(5);
+		@include shift(1);
+		@include media($tablet) {
+			@include span-columns(8);
+			@include shift(0);
+		}
+		@include media($phone) {
+			@include span-columns(11);
+			padding: 0 20px;
+		}
+	}
+
+	.social { 
+		@include span-columns(11);
+		@include shift(1);
+		@include media($tablet) {
+			@include shift(0);
+		}
+		@include media($phone) {
+			padding: 0 20px;
+		}
+		li { 
+			display: inline-block;
+			width: em(18);
+			height: em(18);
+			background: white;
+			text-indent: em(-9999);
+			margin-right: em(7);
+		}
+	}
+
+	h3 { 
+		font-size: em(15.4);
+		font-weight: normal;
+		line-height: em(26);
+		margin-bottom: em(30);
+		&:last-child {
+			margin-bottom: em(10);
+		}
+	}
+
+	a { 
+		white-space: nowrap;
+		display: inline-block;
+	}
+}
+

@@ -1,0 +1,12 @@
+// States
+
+.s-hidden {  
+	display: none;
+	@include media(max-width 769px) { 
+		display: block;
+	}
+}
+
+.s-collapsed {
+
+}

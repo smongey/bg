@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    {% include styles.html %}
+
+    <!-- build:js({app,.tmp}) /assets/js/modernizr.js -->
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <a href="#" class="logo">
+        <h1>Bonagrew</h1>
+    </a>
+    <nav id="main" role="navigation">
+        <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Notebook</a></li>
+            <li><a href="#">About</a></li>
+            <li class="profile"><a href="#">Profile</a></li>
+            <li class="cart"><a href="#">Cart</a></li>
+        </ul>
+    </nav>
+
+    <a href="#menu" class="menu-link">&#9776;</a>
+    <nav id="menu" class="panel" role="navigation">
+        <ul>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Notebook</a></li>
+            <li><a href="#">About</a></li>
+            <li class="profile"><a href="#">Profile</a></li>
+            <li class="cart"><a href="#">Cart</a></li>
+        </ul>
+    </nav>
+
+
+    {{ content }}
+
+
+    <!--[if lte IE 8]>
+      {% include scripts-ie8.html %}
+    <![endif]-->
+
+    {% include scripts.html %}
+    {% include google-analytics.html %}
+  </body>
+</html>

@@ -1,0 +1,65 @@
+// Home
+$displace: -170px;
+
+#home { 
+	@include outer-container;
+	padding: em(600) 0 em(50);
+	@include media($m-desktop) {
+		padding-top: em(520);
+	}
+	@include media($s-desktop) {
+		padding-top: em(440);
+	}
+	ul > li {
+		@include span-columns(5);
+		margin-top: $displace;
+		position: relative;
+		@include media($s-desktop) {
+			margin-top: $displace + 70px;
+		}
+		@include media($tablet) {
+			@include span-columns(6);
+			margin-top: $displace + 120px;
+		}
+		&:first-child {
+			@include shift(4);
+			margin-top: $displace + 70px;
+		}
+		&:nth-child(2) { 
+			@include shift(1);
+		}
+		&:nth-child(3) { 
+			@include shift(7);
+			@include media($tablet) {
+				@include shift(5);
+			}
+		}
+		&:nth-child(4) { 
+			
+		}
+		&:nth-child(5) { 
+			@include shift(4);
+		}
+		&:nth-child(6) { 
+			@include shift(1);
+		}
+		&:nth-child(7) { 
+			@include shift(7);
+			@include media($tablet) {
+				@include shift(5);
+			}
+		}
+	}
+	@include media($phone) {
+		ul > li {
+			@include span-columns(12);
+			margin: em(15) 0 0 0 !important;
+			
+		}
+
+	}
+	h2 {  
+		font-weight: normal;
+		line-height: 1em;
+	}
+}

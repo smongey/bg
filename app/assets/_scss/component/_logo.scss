@@ -1,0 +1,17 @@
+// Logo
+
+.logo {
+	@include span-columns(2);
+	position: fixed;
+	right: 0;
+	bottom: 5%;
+	z-index: 10;
+	height: em(380);
+	text-indent: -9999px;
+	background: transparent center top no-repeat;
+	background-image: url('../img/logo.png');
+	background-image: url('../img/logo.svg'), none;
+	@include media($tablet) {
+		bottom: 0;
+	}
+}

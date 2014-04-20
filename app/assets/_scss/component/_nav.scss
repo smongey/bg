@@ -1,0 +1,113 @@
+// Nav
+
+nav#main {
+	@include outer-container;
+	ul { 
+		@include span-columns(3);
+		min-width: 360px;
+		text-align: left;
+		position: fixed;
+		top: 0px; 
+		right: 0px;
+		z-index: 10;
+		padding: 22px 0px 22px 25px ;
+		background: black;
+		vertical-align: middle;
+		@include media($tablet) { 
+			display: none;
+		}
+		li {
+			display: inline-block;
+			font-weight: bold;
+			margin-right: 14px;
+			-webkit-font-smoothing: antialiased;
+			font-size: em(15);
+			@include media($tablet) { 
+				display: none;
+			}
+		}
+		a { 
+			color:#fff;			
+			&:hover {
+				color: white;
+			}
+		}
+		li:not(.profile):not(.cart) {
+			a:after {
+				content: " ";
+				display: block;
+				height: 1px;
+				position: relative;
+				width: auto;
+				background: white;
+				opacity: 0;
+				margin-top: 0px;
+				@include transition(all 0.2s $ease-in-out-quart);
+			}
+			a:hover:after {
+				@include transition (all 0.2s $ease-in-out-quart);
+				opacity: 1;
+				margin-top: -2px; 
+			}
+		}
+		.profile, .cart, .m-nav { 
+			display: inline-block; 
+			width: 25px;
+			height: 25px;
+			text-indent: -9999px;
+			background: #fff;
+			margin-left: 14px;
+			@include media($tablet) {
+				display: none;
+			}
+
+		}		
+		.cart { 
+			margin-left: 0px;
+		}
+		.m-nav {  
+			display: none;
+			@include media($tablet) {
+				display: inline-block;
+			}
+		}
+	}
+
+}
+
+a.menu-link {
+	position:fixed; 
+	z-index:25; 
+	display:block;
+	color: white;
+	width: em(70);
+	height: em(70);
+	background:black 0 -70px no-repeat;
+	background-image: url('../img/sprite.png');
+	background-image: url('../img/sprite.svg'), none;
+	text-align: center;
+	padding: em(22) em(25);
+	text-indent: em(-9999);
+	@include transition(all 0.4s $ease-in-out-quart);
+	&.on {
+		background-position: 0 0;
+	}
+	@include media(min-width 768px) {
+		display: none;
+	}
+}
+
+.panel {
+    position: fixed;
+    left: -15.625em; /*or width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+    background: black;
+    z-index: 20;
+    padding: em(80) em(25);
+    li { 
+    	margin-bottom: 10px;
+    }
+    a { 
+    	color: white;
+    }
+}

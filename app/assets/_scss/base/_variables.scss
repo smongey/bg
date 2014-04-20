@@ -1,0 +1,49 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$sans-serif: Courier, monospace;
+
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$blue: #477DCA;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Body Color
+$base-body-color: white;
+
+//  Font Colors
+$base-font-color: black;
+$base-accent-color: black;
+
+//  Text Link Colors
+$base-link-color: black;
+$hover-link-color: lighten(black, 15);
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
+
+// Devices
+$l-desktop: max-width 1300px;
+$m-desktop: max-width 1180px;
+$s-desktop: max-width 1000px;
+$tablet: max-width 769px;
+$phone: max-width 480px;
