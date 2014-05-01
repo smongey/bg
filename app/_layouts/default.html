@@ -22,14 +22,22 @@
     <![endif]-->
 
 
-    <a href="#" class="logo">
+    <a href="/" class="logo">
         <h1>Bonagrew</h1>
     </a>
     <nav id="main" role="navigation">
         <ul>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Notebook</a></li>
-            <li><a href="#">About</a></li>
+            {% if page.title == "shop" || page.title == "product"  %}
+            <li class="active"><a href="/shop/">Shop</a></li>
+            {% else %}
+            <li><a href="/shop/">Shop</a></li>
+            {% endif %}
+            {% if page.title == "notebook" %}
+            <li class="active"><a href="/notebook/">Notebook</a></li>
+            {% else %}
+            <li><a href="/notebook/">Notebook</a></li>
+            {% endif %}
+            <li><a href="#about">About</a></li>
             <li class="profile"><a href="#">Profile</a></li>
             <li class="cart"><a href="#">Cart</a></li>
         </ul>
@@ -38,9 +46,9 @@
     <a href="#menu" class="menu-link">&#9776;</a>
     <nav id="menu" class="panel" role="navigation">
         <ul>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Notebook</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="/shop/">Shop</a></li>
+            <li><a href="/notebook/">Notebook</a></li>
+            <li><a href="#about">About</a></li>
             <li class="profile"><a href="#">Profile</a></li>
             <li class="cart"><a href="#">Cart</a></li>
         </ul>

@@ -1,0 +1,22 @@
+// Shop
+
+#shop { 
+	@include outer-container;
+	padding: em(70) 0 em(50);
+	ul > li {
+		@include span-columns(5);
+		position: relative;
+		margin-bottom: em(10);
+		@include media($tablet) {
+			@include span-columns(5);
+			margin-bottom: em(5);
+		}
+	}
+	@include media($phone) {
+		ul > li {
+			@include span-columns(12);
+			margin: em(15) 0 0 0 !important;
+		}
+
+	}
+}

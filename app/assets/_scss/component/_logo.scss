@@ -11,7 +11,21 @@
 	background: transparent center top no-repeat;
 	background-image: url('../img/logo.png');
 	background-image: url('../img/logo.svg'), none;
+	@include transition (all .3s ease);
 	@include media($tablet) {
 		bottom: 0;
 	}
+
+	&.active {
+		&:after {
+			opacity: 1;
+		}	
+	}
+}
+
+.logo:after {
+	@extend .logo;
+	content: ' ';
+	background-position: center bottom;
+	opacity: 0;
 }

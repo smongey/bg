@@ -49,6 +49,12 @@ nav#main {
 				opacity: 1;
 				margin-top: -2px; 
 			}
+			&.active {
+				a:after {
+					opacity: 1;
+					margin-top: -2px;
+				}				
+			}
 		}
 		.profile, .cart, .m-nav { 
 			display: inline-block; 
@@ -57,13 +63,25 @@ nav#main {
 			text-indent: -9999px;
 			background: #fff;
 			margin-left: 14px;
+			@include transition(all .2s $ease-in-out-quart);
+			&:hover{
+				cursor: pointer;
+				opacity: .5;
+			}
 			@include media($tablet) {
 				display: none;
 			}
-
-		}		
+		}
+		.profile {
+			background: transparent -88px 0 no-repeat;
+			background-image: url('../img/sprite.png');
+			background-image: url('../img/sprite.svg'), none;
+		}
 		.cart { 
 			margin-left: 0px;
+			background: transparent -88px -25px no-repeat;
+			background-image: url('../img/sprite.png');
+			background-image: url('../img/sprite.svg'), none;
 		}
 		.m-nav {  
 			display: none;

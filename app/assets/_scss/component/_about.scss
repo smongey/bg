@@ -41,10 +41,41 @@
 			display: inline-block;
 			width: em(18);
 			height: em(18);
-			background: white;
 			text-indent: em(-9999);
 			margin-right: em(7);
+			background: transparent -70px 0 no-repeat;
+			background-image: url('../img/sprite.png');
+			background-image: url('../img/sprite.svg'), none;
+			@include transition(all .2s $ease-in-out-quart);
+			&:hover {
+				opacity: .5;
+				cursor: pointer;
+			}
 		}
+		.tw { background-position: -70px 0px; }
+		.fb { background-position: -70px -18px; }
+		.ig { background-position: -70px -36px; }
+		.top {
+			background: none;
+			display: block;
+			text-indent: 0;
+			color: #fff;
+			width: em(100);
+			height: em(20);
+			margin: em(20) 0 0 0;
+			opacity: 0;
+			@include transition(all .75s $ease-in-out-quart .5s);
+			&:after { 
+				content: "Top";
+			}
+			&:hover{
+				cursor: pointer;
+			}
+			&.active {
+				opacity: 1;
+			}
+		}
+
 	}
 
 	h3 { 
@@ -61,5 +92,6 @@
 		white-space: nowrap;
 		display: inline-block;
 	}
+
 }
 
