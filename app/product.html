@@ -3,54 +3,35 @@ layout: default
 title: product
 ---
 
-<div class="wrap push">
+<div class="wrap">
 
-	<section class="slider">
-
-		<div id='slider' class='swipe'>
-			<div class='swipe-wrap'>
-				<div><a href="#"><img alt="" src="http://placehold.it/1120x575/CCCCCC/000000.png" /></a></div>
-				<div><a href="#"><img alt="" src="http://placehold.it/1120x575/CCCCCC/000000.png" /></a></div>
-				<div><a href="#"><img alt="" src="http://placehold.it/1120x575/CCCCCC/000000.png" /></a></div>
+	<section id="product">
+		<div class="product-info">
+			<h1>Atlantis</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, nostrum ea iusto in minus aspernatur veritatis repudiandae tenetur ipsa consectetur.</p>
+			<div class="top">
+				<a id="info" href="#">Info</a>
+				<a id="addtocart" href="#">Add to Cart</a>
+			</div>
+			<div class="bottom">
+				<ul>
+					<li>7 oz pure linen</li>
+					<li>Fully lined</li>
+					<li>Width 2.25&Prime; / 5.75cm</li>
+					<li>Length 57.5&Prime; / 146cm</li>
+					<li class="dryclean"><span></span>Dry Clean Only</li>
+					<li class="ireland"><span></span>Made in Ireland</li>
+				</ul>
 			</div>
 		</div>
-
-		<ul id="counter">
-			<li class="on"></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</section>
-
-	<section id="home">
-		<h2>Autumn/<br/>Winter<br/>2014</h2>	
-		<ul class="thumbs">
-			<li><a href="#">
-				<img alt="" src="http://placehold.it/480x480/CCCCCC/000000.png" /><span>Product Name<br/>&euro;123</span></a>
-			</li>
-			<li><a href="#"><img alt="" src="http://placehold.it/480x480/CCCCCC/000000.png" /><span>Product Name<br/>&euro;123</span></a></li>
-			<li><a href="#"><img alt="" src="http://placehold.it/480x480/CCCCCC/000000.png" /><span>Product Name<br/>&euro;123</span></a></li>
-			<li><a href="#"><img alt="" src="http://placehold.it/480x480/CCCCCC/000000.png" /><span>Product Name<br/>&euro;123</span></a></li>
-			<li><a href="#"><img alt="" src="http://placehold.it/480x480/CCCCCC/000000.png" /><span>Product Name<br/>&euro;123</span></a></li>
-			<li><a href="#"><img alt="" src="http://placehold.it/480x480/CCCCCC/000000.png" /><span>Product Name<br/>&euro;123</span></a></li>
-			<li><a href="#"><img alt="" src="http://placehold.it/480x480/CCCCCC/000000.png" /><span>Product Name<br/>&euro;123</span></a></li>
-		</ul>
-	</section>
-
-	<section id="about">
-		<div>
-			<div class="info">
-				<h3>Bonagrew is inspired by the good-humoured and hard-working Irish gentleman. A man who mingles with ease between work and play; a man of great company.</h3>
-
-				<h3>Named after the coastal townland in Co. Wicklow, Bonagrew makes impeccably crafted neckties, bowties and scarves with a relaxed attitude.</h3>
-
-				<h3>For all enquires, drop a note to <a href="mailto:info@bonagrew.com"></a>info@bonagrew.com or call us on <a href="tel:353 1 876 5432"></a>+353 1 876 5432 or be social below</h3>
-			</div>
-			<ul class="social">
-				<li class="tw"><a href="#">Twitter</a></li>
-				<li class="fb"><a href="#">Facebook</a></li>
-				<li class="ig"><a href="#">Instagram</a></li>
-			</ul>
+		<ul class="product-images">
+			<li><img alt="image 1" src="http://placehold.it/780x780/f2f2f2/CCCCCC.png" /></li>
+			<li><img alt="image 2" src="http://placehold.it/1000x1000/f2f2f2/CCCCCC.png" /></li>
+			<li><img alt="iamge 3" src="http://placehold.it/1000x1000/f2f2f2/CCCCCC.png" /></li>
 		</div>
+		<a href="#" class="backtotop"></a>
 	</section>
+
+	{% include about.html %}
+
 </div>

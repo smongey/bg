@@ -21,6 +21,9 @@
 			opacity: 1;
 		}	
 	}
+	&:hover {
+		opacity: .5;
+	}
 }
 
 .logo:after {

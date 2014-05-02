@@ -20,7 +20,6 @@ nav#main {
 			display: inline-block;
 			font-weight: bold;
 			margin-right: 14px;
-			-webkit-font-smoothing: antialiased;
 			font-size: em(15);
 			@include media($tablet) { 
 				display: none;
@@ -124,6 +123,30 @@ a.menu-link {
     padding: em(80) em(25);
     li { 
     	margin-bottom: 10px;
+    	display: inline-block;
+		
+		a:after {
+			content: " ";
+			display: block;
+			height: 1px;
+			position: relative;
+			width: inherit;
+			background: white;
+			opacity: 0;
+			margin-top: 0px;
+			@include transition(all 0.2s $ease-in-out-quart);
+		}
+		a:hover:after {
+			@include transition (all 0.2s $ease-in-out-quart);
+			opacity: 1;
+			margin-top: 0px; 
+		}
+		&.active {
+			a:after {
+				opacity: 1;
+				margin-top: 0px;
+			}				
+		}
     }
     a { 
     	color: white;

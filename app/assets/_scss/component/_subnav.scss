@@ -1,7 +1,53 @@
 // Subnav
 
-ul#subnav {
-	
-	& > li { display: inline-block; }
+#subnav {
+	@include outer-container;
+	ul {
+	@include span-columns(9);
+	text-align: left;
+	position: fixed;
+	top: 0px;
+	z-index: 9;
+	padding: 22px 0px 22px 0px;
+	background: #fff;
+	background: rgba(255, 255, 255, .95);
+	vertical-align: middle;
+	@include media($tablet) { 
+		width: 100%;
+		padding-left: em(70);
+	}
+	@include media($phone) {
+		padding-top: 10px;
+		overflow: hidden;
+		height: em(70);
+	}
+	& > li {
+		display: inline-block;
+		margin-right: em(9);
+		font-size: em(15);
+		a:after {
+			content: " ";
+			display: block;
+			height: 1px;
+			position: relative;
+			width: auto;
+			background: black;
+			opacity: 0;
+			margin-top: 0px;
+			@include transition(all 0.2s $ease-in-out-quart);
+		}
+		a:hover:after {
+			@include transition (all 0.2s $ease-in-out-quart);
+			opacity: 1;
+			margin-top: -2px; 
+		}
+		&.active {
+			a:after {
+				opacity: 1;
+				margin-top: -2px;
+			}				
+		}
+	}
+	}
 
 }

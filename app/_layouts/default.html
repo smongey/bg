@@ -46,10 +46,18 @@
     <a href="#menu" class="menu-link">&#9776;</a>
     <nav id="menu" class="panel" role="navigation">
         <ul>
-            <li><a href="/shop/">Shop</a></li>
-            <li><a href="/notebook/">Notebook</a></li>
-            <li><a href="#about">About</a></li>
-            <li class="profile"><a href="#">Profile</a></li>
+            {% if page.title == "shop" || page.title == "product"  %}
+            <li class="active"><a href="/shop/">Shop</a></li><br/>
+            {% else %}
+            <li><a href="/shop/">Shop</a></li><br/>
+            {% endif %}
+            {% if page.title == "notebook" %}
+            <li class="active"><a href="/notebook/">Notebook</a></li><br/>
+            {% else %}
+            <li><a href="/notebook/">Notebook</a></li><br/>
+            {% endif %}
+            <li><a href="#about">About</a></li><br/>
+            <li class="profile"><a href="#">Profile</a></li><br/>
             <li class="cart"><a href="#">Cart</a></li>
         </ul>
     </nav>

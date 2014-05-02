@@ -55,8 +55,12 @@ $('li.top').on "click", (e) ->
     scrollTop: "0px"
   , 800, "easeOutQuint"
 
-
-
+$('#info').on "click", (e) ->
+  e.preventDefault();
+  if !$('.bottom ul').hasClass('active')
+    $('.bottom ul').addClass('active');
+  else
+    $('.bottom ul').removeClass('active');
 
 
 
