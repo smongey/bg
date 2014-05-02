@@ -15,7 +15,7 @@
 	@include media($phone) {
 		ul > li {
 			@include span-columns(12);
-			margin: em(15) 0 0 0 !important;
+			margin: 0 0 em(15) 0 !important;
 		}
 
 	}

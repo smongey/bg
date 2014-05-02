@@ -25,6 +25,7 @@
 	text-align: left;
 	@include media($tablet) {
 		@include span-columns(12);
+		margin-top: em(70);
 	}
 }
 

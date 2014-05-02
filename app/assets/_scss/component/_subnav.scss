@@ -14,7 +14,7 @@
 	vertical-align: middle;
 	@include media($tablet) { 
 		width: 100%;
-		padding-left: em(70);
+		padding-left: em(85);
 	}
 	@include media($phone) {
 		padding-top: 10px;

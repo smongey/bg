@@ -24,7 +24,13 @@
 
 body { overflow-x: hidden; }
 
-.wrap { padding: 0 em(20); position: relative; }
+.wrap { 
+	padding: 0 em(20);
+	position: relative;
+	@include media($phone) {
+		padding: 0;
+	}
+}
 
 ::selection {
 	background: #efefef;

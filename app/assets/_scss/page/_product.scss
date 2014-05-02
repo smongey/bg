@@ -131,5 +131,33 @@
 }
 
 .product-images {
-	
+	li {
+		margin-bottom: em(40);
+		&:first-child {
+			@include span-columns(8);
+			@include shift(4);
+			margin-right: em(-150);
+			@include media($tablet) {
+				@include span-columns(12);
+			}
+		}
+		&:nth-child(2) {
+			@include span-columns(10);
+			margin-left: em(-100);
+			@include media($tablet) {
+				@include span-columns(12);
+			}
+		}
+		&:nth-child(3) {
+			@include span-columns(10);
+			@include shift(2);
+			@include media($tablet) {
+				@include span-columns(12);
+			}
+		}
+		@include media($tablet) {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
 }
