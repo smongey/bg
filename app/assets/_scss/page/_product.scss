@@ -13,6 +13,9 @@
 		padding: em(90) 0 0 0;
 		margin-bottom: -150px;
 	}
+	@include media($phone) {
+		padding: em(90) em(30) em(0) em(30);
+	}
 	h1 {
 		display: inline-block;
 		position: relative;
@@ -159,5 +162,18 @@
 			margin-left: auto !important;
 			margin-right: auto !important;
 		}
+	}
+}
+
+.plant {
+	display: block;
+	width:em(90);
+	height:em(125);
+	margin-left: 50%;
+	margin-bottom: em(70);
+	@include transform( translateX(-45px));
+	background: url('../img/plant.png') no-repeat;
+	@include media($phone) {
+		@include transform( translateX(-45px) scale(.7));
 	}
 }

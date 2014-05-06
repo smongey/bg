@@ -25,6 +25,9 @@
 		display: inline-block;
 		margin-right: em(9);
 		font-size: em(15);
+		@include media($phone) {
+			margin-right: em(5);
+		}
 		a:after {
 			content: " ";
 			display: block;

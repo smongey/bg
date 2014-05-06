@@ -10,27 +10,30 @@ if $('#home').length > 0
       counter[pos].className = "on"
       return
   )
+
   $(window).on "scroll", ->
-    duh = $("#about").position().top
-    $(".thumbs li:nth-child(2)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 9) + "px)"
-    $(".thumbs li:nth-child(3)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 10) + "px)"
-    $(".thumbs li:nth-child(4)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 20) + "px)"
-    $(".thumbs li:nth-child(5)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 7) + "px)"
-    $(".thumbs li:nth-child(6)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 12) + "px)"
-    $(".thumbs li:nth-child(7)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 20) + "px)"
+    if $(window).width() > 700
+      $(".thumbs li:nth-child(2)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 9) + "px)"
+      $(".thumbs li:nth-child(3)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 10) + "px)"
+      $(".thumbs li:nth-child(4)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 20) + "px)"
+      $(".thumbs li:nth-child(5)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 7) + "px)"
+      $(".thumbs li:nth-child(6)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 12) + "px)"
+      $(".thumbs li:nth-child(7)").css "-webkit-transform", "translateY( -" + Math.floor($(window).scrollTop() / 20) + "px)"
+    else 
+      $(".logo").addClass "hide"
     return
+
+
 
 $(document).ready ->
 	$(".menu-link").bigSlide()
-	$(".menu-link").on "click", ->
+	$(".menu-link").on "click touchstart", ->
 		if $(".panel").position().left < 0
 			$(this).addClass "on"
 		else
 			$(this).removeClass "on"
 		return
-	return
-
-
+	
 $(window).on "scroll resize", ->
   logoDistanceFromBottom = Math.floor($(window).height() - ($('.logo').height() + $('.logo').position().top))
   logoHeight = $('.logo').height()
@@ -41,6 +44,7 @@ $(window).on "scroll resize", ->
   else 
       $('.logo, li.top').removeClass('active');
   return
+
 
 $('a[href="#about"]').on "click", (e) ->
   e.preventDefault()
@@ -61,8 +65,6 @@ $('#info').on "click", (e) ->
     $('.bottom ul').addClass('active');
   else
     $('.bottom ul').removeClass('active');
-
-
 
 
 

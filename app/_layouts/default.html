@@ -27,16 +27,8 @@
     </a>
     <nav id="main" role="navigation">
         <ul>
-            {% if page.title == "shop" || page.title == "product"  %}
-            <li class="active"><a href="/shop/">Shop</a></li>
-            {% else %}
-            <li><a href="/shop/">Shop</a></li>
-            {% endif %}
-            {% if page.title == "notebook" %}
-            <li class="active"><a href="/notebook/">Notebook</a></li>
-            {% else %}
-            <li><a href="/notebook/">Notebook</a></li>
-            {% endif %}
+            <li {% if page.title == "shop" %}class="active"{% elsif page.title == "product" %}class="active"{% endif %}><a href="/shop/">Shop</a></li>
+            <li {% if page.title == "notebook" %}class="active"{% endif %}><a href="/notebook/">Notebook</a></li>
             <li><a href="#about">About</a></li>
             <li class="profile"><a href="#">Profile</a></li>
             <li class="cart"><a href="#">Cart</a></li>

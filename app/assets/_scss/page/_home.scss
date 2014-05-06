@@ -10,6 +10,12 @@ $displace: -170px;
 	@include media($s-desktop) {
 		padding-top: em(440);
 	}
+	@include media($tablet) {
+		padding-top: em(350);
+	}
+	@include media($phone) {
+		padding-top: em(250);
+	}
 	ul > li {
 		@include span-columns(5);
 		margin-top: $displace;
@@ -54,12 +60,14 @@ $displace: -170px;
 		ul > li {
 			@include span-columns(12);
 			margin: em(15) 0 0 0 !important;
-			
 		}
-
 	}
 	h2 {  
 		font-weight: normal;
 		line-height: 1em;
+		@include media($phone) {
+			text-align: center;
+			font-size: em(22);
+		}
 	}
 }

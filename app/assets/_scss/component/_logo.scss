@@ -24,6 +24,10 @@
 	&:hover {
 		opacity: .5;
 	}
+	&.hide {
+		@include transition (all 1s ease);
+		margin-right: -300px;
+	}
 }
 
 .logo:after {

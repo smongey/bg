@@ -11,6 +11,7 @@
     "respond": "~1.4.2"
   },
   "devDependencies": {
-    "jquery-easing": "*"
+    "jquery-easing": "*",
+    "fastclick": "~1.0.1"
   }
 }

@@ -1,5 +1,95 @@
 // Notebook
 
 #notebook {
-	
+	@include outer-container;
+
+	article {
+		@include span-columns(8);
+		@include media($tablet) {
+			@include span-columns(10);
+		}
+	}
+}
+
+article {
+	.date {
+		display: inline-block;
+		position: relative;
+		font-weight: normal;
+		font-size: em(15);
+		padding: 23px 0;
+		line-height: em(25);
+		@include media($tablet) { 
+			padding-left: em(85);
+		}
+		&:after {
+			content: " ";
+			display: block;
+			height: 1px;
+			margin-top: 0;
+			position: relative;
+			width: auto;
+			background: black;
+		}
+	}
+	img {
+		max-width: 100%;
+		@include media($tablet) {
+			max-width: 120%;
+		}
+	}
+	h1 {
+		@include span-columns(3 of 8);
+		font-weight: normal;
+		font-size: em(15);
+		padding: 22px 0;
+		line-height: em(26);
+		@include media($phone) {
+			@include span-columns(12);
+			padding: em(22);
+		}
+	}
+	.text {
+		@include span-columns(5 of 8);
+		@include omega();
+		font-size: em(15);
+		line-height: em(26);
+		padding: 22px 0;
+		p { 
+			padding-bottom: em(20);
+		}
+		@include media($phone) {
+			@include span-columns(12);
+			padding: em(22);
+		}
+	}
+	.more {
+		display: inline-block;
+		position: relative;
+		font-weight: normal;
+		font-size: em(15);
+		padding: 22px 0;
+		line-height: em(26);
+		&:after {
+			content: " ";
+			display: block;
+			height: 1px;
+			margin-top: 0;
+			position: relative;
+			width: auto;
+			background: black;
+		}
+	}
+}
+
+.paginate {
+	@include span-columns(8);
+	@include shift(3);
+	padding-bottom: em(60);
+	li {
+		display: inline-block;
+		font-size: em(15);
+		padding: em(22) em(22) em(22) 0;
+		line-height: em(26);
+	}
 }
